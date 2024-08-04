@@ -68,7 +68,7 @@ gin-backend-starter/
 Update the `.env` file with your specific configurations before starting the app
 
 
-## API Routes
+## Starter API Routes
 
 - `POST /api/users/register`: Register a new user
 - `POST /api/auth/sign-in`: User login
