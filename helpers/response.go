@@ -29,11 +29,13 @@ func FormatAPIResponse(context *gin.Context, code int, data any) {
 	if code >= 400 {
 		statusResponse = GetStatusMessage(code)
 		isError = true
-		message = err.Error()
 
 		if ok {
 			data = nil
-		}
+            message = err.Error()
+		} else {
+            message = statusResponse
+        }
 
 	} else if ok { // Check if data contains an error
         statusResponse = "Error"

@@ -34,6 +34,8 @@ func SetupRouters() *gin.Engine {
 	router.Use(middlewares.CORSMiddleware())
 
 	registerInternalRoutes(router) //Internal routes registeration
+	RegisterUserRoutes(router.Group("/api/users"))
+	RegisterAuthRoutes(router.Group("/api/auth"))
 
 	return router
 }

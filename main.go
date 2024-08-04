@@ -2,10 +2,11 @@ package main
 
 import (
 	"log"
-	"time"
 	"os"
+	"time"
 
 	"github.com/imshawan/gin-backend-starter/configs"
+	"github.com/imshawan/gin-backend-starter/infra/database"
 	"github.com/imshawan/gin-backend-starter/routers"
 	"github.com/spf13/viper"
 )
@@ -19,6 +20,12 @@ func main() {
 	viper.SetDefault("SERVER_TIMEZONE", "Asia/Kolkata")
 	loc, _ := time.LoadLocation(viper.GetString("SERVER_TIMEZONE"))
 	time.Local = loc
+
+	// Initialize the database connection before the server starts
+	if err := database.SetupDbConnection(); err != nil {
+		log.Printf("Error while initializing database connection, %s", err)
+		os.Exit(1)
+	}
 
 	router := routers.SetupRouters()
 
