@@ -8,7 +8,7 @@ While it provides a comprehensive starting point, it remains adaptable for furth
 ```bash
 gin-backend-starter/
 ├── assets      # Static files and resources
-├── configs     # Configuration files and setup, these would execure during pre-start process of the server
+├── configs     # Configuration files and setup, these would execute during the pre-start process of the server
 ├── helpers     # Utility functions and common helpers
 ├── infra       # Infrastructure-related code (database, logger, etc. that would be used throughout the app)
 ├── models      # Data models and database schemas
@@ -72,7 +72,7 @@ Update the `.env` file with your specific configurations before starting the app
 
 - `POST /api/users/register`: Register a new user
 - `POST /api/auth/sign-in`: User login
-- `GET /api/users`: Get the current logged in user (protected route)
+- `GET /api/users`: Get the currently logged-in user (protected route)
 - `GET /health`: Check the server status, if running
 
 ## Major Dependencies
@@ -103,9 +103,9 @@ This project uses [Air](https://github.com/air-verse/air) for live reloading dur
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b improvement/AmazingImprovements`)
+3. Commit your changes (`git commit -m 'Added some amazing improvements'`)
+4. Push to the branch (`git push origin improvement/AmazingImprovements`)
 5. Open a Pull Request
 
 ## License
