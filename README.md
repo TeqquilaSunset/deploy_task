@@ -41,7 +41,7 @@ gin-backend-starter/
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/gin-backend-starter.git
+    git clone https://github.com/imshawan/gin-backend-starter.git
     cd gin-backend-starter
     ```
 
