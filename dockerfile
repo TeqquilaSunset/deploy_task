@@ -5,7 +5,6 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-# Стоит подумать над тем, чтобы не копировать вообще все файлы.
 COPY . ./ 
 
 RUN go mod tidy && CGO_ENABLED=0 GOOS=linux go build -o /gin-backend-starter
