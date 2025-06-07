@@ -11,12 +11,8 @@ RUN go mod tidy && CGO_ENABLED=0 GOOS=linux go build -o /gin-backend-starter
 
 EXPOSE 4000
 
-CMD ["/gin-backend-starter"]
-
 
 FROM alpine:3.22 AS release-stage
-
-RUN apk add --no-cache ca-certificates
 
 WORKDIR /
 
